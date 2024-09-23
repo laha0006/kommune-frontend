@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+    <h3>Kommuner</h3>
+    <div style="height: 300px; overflow-y: auto;">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Kode</th>
+                <th>Navn</th>
+                <th>Region</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody id="kommuneTbody">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="kommuneModal" tabindex="-1" aria-labelledby="kommuneModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="kommuneModalTital">Test</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
