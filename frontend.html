@@ -5,23 +5,33 @@
     <title>Title</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <script src="./js/bootstrap.js"></script>
+    <style>
+        .text-shadow {
+            text-shadow: #1a1d20;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
-    <h3>Kommuner</h3>
-    <div style="height: 300px; overflow-y: auto;">
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Kode</th>
-                <th>Navn</th>
-                <th>Region</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody id="kommuneTbody">
-            </tbody>
-        </table>
+    <div class="d-flex flex-column align-items-center">
+        <h3>Kommuner</h3>
+        <div class="mb-3" style="height: 300px; overflow-y: auto;">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Kode</th>
+                    <th>Navn</th>
+                    <th>Region</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="kommuneTbody">
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <button type="button" id="addKommune" class="btn btn-success fw-bolder">Add Kommune</button>
+        </div>
     </div>
 </div>
 
@@ -33,11 +43,21 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <form>
+            <input hidden="hidden" id="kommuneKode" type="number">
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Navn</label>
+                <input type="text" id="nameInput" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="regionInput" class="form-label">Region</label>
+                <select id="regionInput" required></select>
+            </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button id="save" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
       </div>
     </div>
   </div>
